@@ -290,6 +290,10 @@ const userSchema = new mongoose.Schema({
 
 const User = mongoose.model('User', userSchema);
 
+app.get("/",(req,res)=>{
+    res.json("Hello");
+})
+
 // User registration route
 app.post('/api/register', async (req, res) => {
   try {
